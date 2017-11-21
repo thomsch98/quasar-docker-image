@@ -1,0 +1,26 @@
+{
+  "server": {
+    "port": ${PORT}
+  },
+  "metastore": {
+    "database": {
+      "postgresql": {
+        "host": "quasar_metastore",
+        "port": 5432,
+        "database": "postgres",
+        "userName": "postgres",
+        "password": "postgres"
+      }
+    }
+  },
+  "parameters": {
+    "loglevel": 1
+  },
+  "mountings": {
+    "${MOUNT}": {
+      "mongodb": {
+        "connectionUri": "${CONNECTION}"
+      }
+    }
+  }
+}
